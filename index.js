@@ -14,9 +14,21 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
-  res.setHeader("Content-Type", "text/html");
+  // GET css file
+  if (req.method === "GET" && req.url === "/style/style.css") {
+    const css = await fs.readFile("./public/style.css");
 
+    res.writeHead(200, {
+      "Content-Type": "text/css",
+    });
+
+    res.end(css);
+    return;
+  }
+
+  res.setHeader("Content-Type", "text/html");
   let path = "./pages/";
+
   switch (req.url) {
     case "/": {
       res.statusCode = 200;
