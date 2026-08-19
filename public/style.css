@@ -11,10 +11,25 @@ body {
   min-height: 10vh;
   padding: 1rem 2rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #ded7cf;
   background-color: #ebe3da;
+}
+
+.links {
+  display: flex;
+  gap: 2rem;
+}
+
+.links a {
+  font-size: 1.5rem;
+  color: #2d2926;
+  text-decoration: none;
+}
+
+.links a:hover {
+  transform: scale(1.03);
 }
 
 .container {
@@ -56,6 +71,10 @@ body {
   background-color: #fffdf9;
   border: 1px solid #e5ddd4;
   box-shadow: 0 4px 15px rgba(45, 41, 38, 0.05);
+}
+
+.contact-section p {
+  margin: 0;
 }
 
 .section-title {
@@ -182,6 +201,7 @@ p {
 }
 
 address {
+  text-align: center;
   line-height: 1.7;
   font-style: normal;
 }
