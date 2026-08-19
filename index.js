@@ -3,6 +3,17 @@ import fs from "node:fs/promises";
 import parseBody from "./helpers/parser.js";
 
 const server = http.createServer(async (req, res) => {
+  if (req.method === "GET" && req.url === "/top_favicon.svg") {
+    const favicon = await fs.readFile("./public/top_favicon.svg");
+
+    res.writeHead(200, {
+      "Content-Type": "image/svg+xml",
+    });
+
+    res.end(favicon);
+    return;
+  }
+
   res.setHeader("Content-Type", "text/html");
 
   let path = "./pages/";
