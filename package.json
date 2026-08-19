@@ -5,7 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -17,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/pawelgawron3/odin-basic-informational-site/issues"
   },
-  "homepage": "https://github.com/pawelgawron3/odin-basic-informational-site#readme"
+  "homepage": "https://github.com/pawelgawron3/odin-basic-informational-site#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
 }
