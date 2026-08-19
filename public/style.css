@@ -1,0 +1,187 @@
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f1eb;
+  color: #2d2926;
+}
+
+.site-header {
+  min-height: 10vh;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ded7cf;
+  background-color: #ebe3da;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.container h1 {
+  margin: 0;
+  font-size: 3rem;
+  letter-spacing: 0.02rem;
+}
+
+.container p {
+  margin: 0;
+  font-style: italic;
+  color: #756b63;
+}
+
+.main-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.main-content > section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 12px;
+  background-color: #fffdf9;
+  border: 1px solid #e5ddd4;
+  box-shadow: 0 4px 15px rgba(45, 41, 38, 0.05);
+}
+
+.section-title {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+}
+
+p {
+  line-height: 1.7;
+}
+
+.intro-text {
+  max-width: 750px;
+  font-size: 1.1rem;
+}
+
+.coffee-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.coffee-item {
+  padding: 0.8rem 1.2rem;
+  border-radius: 999px;
+  background-color: #ded0c2;
+  color: #3d332c;
+  font-weight: 600;
+}
+
+.opening-hours {
+  margin-bottom: 0;
+}
+
+.hours {
+  margin-left: 1rem;
+  font-weight: 600;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group label {
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.8rem;
+  border: 1px solid #d4cbc2;
+  border-radius: 6px;
+  font: inherit;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: 2px solid #a8907c;
+  border-color: transparent;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.button {
+  width: fit-content;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #4b4038;
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #302923;
+}
+
+.site-footer {
+  margin-top: 2rem;
+  padding: 2rem;
+  border-top: 1px solid #ded7cf;
+  background-color: #ebe3da;
+  color: #756b63;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.error-section {
+  text-align: center;
+}
+
+.error-code {
+  margin: 0;
+  font-size: 7rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #b29b86;
+}
+
+.error-section .button {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+address {
+  line-height: 1.7;
+  font-style: normal;
+}
