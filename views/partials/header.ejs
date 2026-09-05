@@ -1,0 +1,12 @@
+<header class="site-header">
+  <div class="container">
+    <h1 class="site-title">Morning Haze</h1>
+    <p class="site-tagline">Good coffee. Quiet moments.</p>
+  </div>
+
+  <div class="links">
+    <% links.forEach((link) => { %>
+      <a href="<%= link.href %>"><%= link.text %></a>
+    <% }) %>
+  </div>
+</header>
