@@ -1,30 +1,25 @@
 import express from "express";
-import path from "path";
-import { fileURLToPath } from "url";
 import parseBody from "./helpers/parser.js";
 
 const app = express();
 
 const PORT = process.env.PORT || 8080;
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-app.set("views", path.join(__dirname, "views"));
+app.set("views", "./views");
 app.set("view engine", "ejs");
 
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "pages", "index.html"));
+  res.render("index");
 });
 
 app.get("/about", (req, res) => {
-  res.sendFile(path.join(__dirname, "pages", "about.html"));
+  res.render("about");
 });
 
 app.get("/contact-me", (req, res) => {
-  res.sendFile(path.join(__dirname, "pages", "contact-me.html"));
+  res.render("contact-me");
 });
 
 app.post("/contact", async (req, res) => {
@@ -38,7 +33,7 @@ app.post("/contact", async (req, res) => {
 });
 
 app.use((req, res) => {
-  res.status(404).sendFile(path.join(__dirname, "pages", "404.html"));
+  res.status(404).render("404");
 });
 
 app.listen(PORT, (err) => {
