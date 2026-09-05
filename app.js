@@ -11,15 +11,30 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-  res.render("index");
+  res.render("index", {
+    links: [
+      { href: "/about", text: "About" },
+      { href: "/contact-me", text: "Contact" },
+    ],
+  });
 });
 
 app.get("/about", (req, res) => {
-  res.render("about");
+  res.render("about", {
+    links: [
+      { href: "/", text: "Home" },
+      { href: "/contact-me", text: "Contact" },
+    ],
+  });
 });
 
 app.get("/contact-me", (req, res) => {
-  res.render("contact-me");
+  res.render("contact-me", {
+    links: [
+      { href: "/", text: "Home" },
+      { href: "/about", text: "About" },
+    ],
+  });
 });
 
 app.post("/contact", async (req, res) => {
